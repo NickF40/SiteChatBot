@@ -1,0 +1,61 @@
+<section id="demo">
+       <div class="vertical-align">
+           <div class="container">
+               <div class="row">
+                   <div class="col-sm-4 col-sm-offset-5 col-xs-offset-0">
+                       <div class="card no-border">
+                           <div id="chat" class="conv-form-wrapper">
+                               <form action="" method="GET" class="hidden">
+                                    <select name="can_i" data-conv-question="Привет! Я - чат-бот компании Lampus-it. Можно задать тебе пару вопросов?">
+                                       <option value="yes">Да</option>
+                                       <option value="by-myself">Я сам разберусь!</option>
+                                   </select>
+                                   <div data-conv-fork="can_i">
+                                    <div data-conv-case="yes">
+                                   <select name="platform1" data-conv-question="Для какой платформы вам необходим бот?">
+                                       <option value="Telegram">Telegram</option>
+                                       <option value="Facebook">Facebook Messenger</option>
+                                       <option value="WhatsApp">WhatsApp</option>
+                                       <option value="VK">Vkontakte</option>
+                                       <option value="other">Другой мессенджер/соцсеть</option>
+                                   </select>
+                                   <div data-conv-fork="platform">
+                                       <div data-conv-case="other">
+                                           <input type="text" name="platform" data-conv-question="Напишите необходимую платформу, пожалуйста">
+                                       </div>
+                                    </div>
+                                    <select name="bot_type" data-conv-question="Выберите тип бота">
+                                      <option value="visit_bot">Бот-визитка</option>
+                                      <option value="crypt">Криптобот</option>
+                                      <option value="game">Бот-игра</option>
+                                      <option value="event_bot">Бот-мероприятие</option>
+                                    </select>
+                                   <select name="consult" data-conv-question="Хорошо! Хотите записаться на онлайн-консультацию по выбору бота?">
+                                     <option value="Yes">Да</option>
+                                     <option value="No">Нет</option>
+                                   </select>
+                                   <div data-conv-fork="consult">
+                                     <div data-conv-case="Yes">
+                                       <input type="text" name="phone_number" data-conv-question="Тогда напишите свой номер телефона, пожалуйста">
+                                       <input type="text" name="consult_time" data-conv-question="Хорошо, а теперь напишите время типа (16:00), когда мы можем вам позвонить завтра!">
+                                       <input type="text" data-no-answer="true" data-conv-question="Отлично! Наш консультант позвонит вам завтра в {consult_time} часов!">
+                                     </div>
+                                     <div data-conv-case="No">
+                                      <input type="text" data-no-answer="yes" data-conv-question="Хорошо! Если что, вы всегда можете позвонить по нашему телефону +7(906)894-68-84 или написать нам в Telegram(@Lampus_it) и пообщаться лично!">
+                                    <input type="text" name="goodbye" data-conv-question="Пока!">
+                                     </div>
+                                   </div>
+                                   </div>
+                                   <div data-conv-case="by-myself">
+                                    <input type="text" data-no-answer="yes" data-conv-question="Хорошо! Если что, вы всегда можете позвонить по нашему телефону +7(906)894-68-84 или написать нам в Telegram(@Lampus_it) и пообщаться лично!">
+                                    <input type="text" name="goodbye" data-conv-question="Пока!">
+                                   </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
