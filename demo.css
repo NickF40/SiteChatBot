@@ -5,6 +5,10 @@ html, body {
 	font-size: 16px;
 }
 
+select{
+    overflow-x: scroll;	
+}
+
 section#demo {
 	 
     position: fixed;
